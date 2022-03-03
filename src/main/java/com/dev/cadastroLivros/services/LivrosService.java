@@ -28,8 +28,8 @@ public class LivrosService {
 		return livrosRepository.findAll();
 	}
 
-	public void delete(LivrosModel livrosModel) {
-		livrosRepository.delete(livrosModel);
+	public void delete(Long id) {
+		livrosRepository.deleteById(id);
 
 	}
 }

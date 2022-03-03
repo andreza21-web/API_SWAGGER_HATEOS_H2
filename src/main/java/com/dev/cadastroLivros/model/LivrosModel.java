@@ -14,7 +14,7 @@ import org.springframework.hateoas.RepresentationModel;
 
 @Entity
 @Table(name = "Libraries")
-public class LivrosModel extends RepresentationModel<LivrosModel> implements Serializable {
+public class LivrosModel extends RepresentationModel<LivrosModel>   implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 

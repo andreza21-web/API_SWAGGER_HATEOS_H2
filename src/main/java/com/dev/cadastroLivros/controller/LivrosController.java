@@ -92,11 +92,13 @@ public class LivrosController {
 	@ApiOperation(value = "Deletar livro")
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Object> delete(@PathVariable(value = "id") Long id) {
-		Optional<LivrosModel> livrosModel = service.findById(id);
-		if (!livrosModel.isPresent()) {
-			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Libraries not found.");
-		}
-		service.delete(livrosModel.get());
+		/*
+		 * Optional<LivrosModel> livrosModel = service.findById(id); if
+		 * (!livrosModel.isPresent()) { return
+		 * ResponseEntity.status(HttpStatus.NOT_FOUND).body("Libraries not found."); }
+		 * service.delete(livrosModel.get());
+		 */
+		service.delete(id);
 		return ResponseEntity.status(HttpStatus.OK).body("Libraries deleted successfully.");
 	}
 }
